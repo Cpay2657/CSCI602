@@ -1,0 +1,11 @@
+How to run requirements.txt to install all dependencies:
+
+In the terminal (cmd prompt or conda prompt), activate your desired environment.
+	- In conda prompt use: conda activate <env_name>
+	- The name of the env should appear in parentheses in front of the filepath
+		-(env_name) C:\\...\...
+Next, navigate to the directory where the requirements.txt is saved.
+
+Then, type:
+	
+	pip install -r <requirements.txt>
