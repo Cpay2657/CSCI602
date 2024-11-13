@@ -1,0 +1,50 @@
+{"source": "/home/phat/PycharmProjects/DiffusionGenarativeModel/train_data/amazon",
+"target": "/home/phat/PycharmProjects/DiffusionGenarativeModel/train_data/webcam",
+"input_shape": [256, 256, 3],
+"num_classes": 31,
+"train_decoder": true,
+"ae_ensemble": 2,
+"ae_step": 0.1,
+"mma_loss_frac": 0.2,
+"reuse_pretrained": false,
+"use_existingfile": false,
+"class_pretrain_config": {
+  "pre_trained_classifier_path": "/home/phat/PycharmProjects/Autoencoder_Induced_Domain_Drift/models/classifiers/baseline_classifier.keras",
+  "model_save_path": "/home/phat/PycharmProjects/Autoencoder_Induced_Domain_Drift/models/classifiers/baseline_classifier_2.keras",
+  "batch_size": 128,
+  "epochs": 25,
+  "patience": 3,
+  "optimizer": {
+    "identifier": "Adam",
+    "learning_rate": 0.001}
+},
+  "class_train_config": {
+    "model_save_dir": "/home/phat/PycharmProjects/Autoencoder_Induced_Domain_Drift/models/classifiers/",
+    "batch_size": 64,
+    "epochs": 20,
+    "patience": 2,
+    "optimizer": {
+    "identifier": "Adam",
+    "learning_rate": 0.002}
+  },
+  "ae_pre_train_config": {
+    "ae_model_savepath":null,
+    "pre_trained_ae_path": null,
+    "batch_size": 128,
+    "epochs": 100,
+    "patience": 10,
+    "optimizer": {
+    "identifier": "Adam",
+    "learning_rate": 0.01}
+  },
+
+  "ae_train_config": {
+    "model_save_dir":"/home/phat/PycharmProjects/Autoencoder_Induced_Domain_Drift/models/ae_augmentors/ae_ens_diff_init",
+    "batch_size": 64,
+    "epochs": 2,
+    "optimizer": {
+    "identifier": "Adam",
+    "learning_rate": 0.0001
+    }
+  }
+}
